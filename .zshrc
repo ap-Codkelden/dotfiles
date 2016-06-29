@@ -16,6 +16,10 @@ source /home/rino/bureau/prompt_bureau_setup.zsh
 bindkey "\e[3~" delete-char
 bindkey ';5C' emacs-forward-word
 bindkey ';5D' emacs-backward-word
+# bindkey "${terminfo[khome]}" beginning-of-line
+# bindkey "${terminfo[kend]}" end-of-line
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
 
 # instead of rebuild cache use
 zstyle ":completion:*:commands" rehash 1
