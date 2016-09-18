@@ -2,9 +2,6 @@
 
 source /home/rino/bureau/prompt_bureau_setup.zsh
 
-# (костыль) раскладка
-# sh ~/keyb.sh
-
 # key bindings
 # setup key accordingly
 
@@ -13,13 +10,14 @@ source /home/rino/bureau/prompt_bureau_setup.zsh
 [[ -n "${key[Down]}"    ]]  && bindkey  "${key[Down]}" down-line-or-history
 [[ -n "${key[Left]}"    ]]  && bindkey  "${key[Left]}" backward-char
 [[ -n "${key[Right]}"   ]]  && bindkey  "${key[Right]}" forward-char
+
 bindkey "\e[3~" delete-char
 bindkey ';5C' emacs-forward-word
 bindkey ';5D' emacs-backward-word
-# bindkey "${terminfo[khome]}" beginning-of-line
-# bindkey "${terminfo[kend]}" end-of-line
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
+# this bind extremly slow space
+# bindkey " ^[[6~" down-line-or-history 
 
 # instead of rebuild cache use
 zstyle ":completion:*:commands" rehash 1
@@ -87,7 +85,8 @@ autoload -U promptinit && promptinit
 #RPROMPT=$'%{\e[0;32m%}[%{\e[0;37m%}%*%{\e[0;32m%}]%{\e[0m%}'
 
 #PATH=/usr/local/texlive/2013/bin/x86_64-linux:$PATH
-PATH=/home/rino/.gem/ruby/2.1.0/bin:$PATH
+#PATH=/home/rino/.gem/ruby/2.1.0/bin:$PATH
+PATH=/opt/texlive/2016/bin/x86_64-linux:$PATH
 
 # Aliases 
 

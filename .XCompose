@@ -1,13 +1,14 @@
-# Original author: a13 <https://github.com/a13> 
-# 
 # -*-	mode: conf; -*-	
+# Original author: a13 <https://github.com/a13>
+
 include "/usr/share/X11/locale/ru_RU.UTF-8/Compose"
 
 # Punctuation
 # знаки препинания, необходимые в русском, которых нет в en_US.UTF-8/Compose
 <Multi_key> <period> <minus> : "…" U2026 # HORIZONTAL ELLIPSIS, многоточие
 <Multi_key> <period> <space> : "…" U2026 # HORIZONTAL ELLIPSIS, многоточие
-<Multi_key> <?> <!> : "⁈" U2048 # QUESTION EXCLAMATION, ?!
+# <Multi_key> <?> <!> : "⁈" U2048 # QUESTION EXCLAMATION, ?!
+<Multi_key> <question> <exclam> : "⁈" U2048 # ?!
 <Multi_key> <period> <colon> : "…" # ELLIPSIS
 
 # №: набирается в русской раскладке без ухищрений,
