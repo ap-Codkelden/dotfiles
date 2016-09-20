@@ -16,8 +16,7 @@ bindkey ';5C' emacs-forward-word
 bindkey ';5D' emacs-backward-word
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
-# this bind extremly slow space
-# bindkey " ^[[6~" down-line-or-history 
+bindkey "^[[6~" down-line-or-history 
 
 # instead of rebuild cache use
 zstyle ":completion:*:commands" rehash 1
