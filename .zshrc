@@ -1,4 +1,4 @@
-#. /etc/environment
+# . /etc/environment
 
 source /home/rino/bureau/prompt_bureau_setup.zsh
 
@@ -43,16 +43,12 @@ zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 
-#autoload zkbd
-#[[ ! -f $HOME/.zkbd/$TERM-$VENDOR-$OSTYPE ]] && zkbd
-#source $HOME/.zkbd/$TERM-$VENDOR-$OSTYPE
-
-#autoload predict-on
-#zle -N predict-on
-#zle -N predict-off
-#bindkey '^Z'   predict-on
-#bindkey '^X^Z' predict-off
-#zstyle ':predict' verbose true
+# autoload predict-on
+# zle -N predict-on
+# zle -N predict-off
+# bindkey '^Z'   predict-on
+# bindkey '^X^Z' predict-off
+# zstyle ':predict' verbose true
 dot() {
   if [[ $LBUFFER = *.. ]]; then
     LBUFFER+=/..
@@ -80,11 +76,6 @@ bindkey -e
 
 autoload -U promptinit && promptinit
 
-#PROMPT=$'%{\e[0;32m%}[%{\e[0;37m%}%n@%m%{\e[0m%} %{\e[1;34m%}%2~%{\e[0;32m%}] %{\e[1;31m%}%#%{\e[0m%} '
-#RPROMPT=$'%{\e[0;32m%}[%{\e[0;37m%}%*%{\e[0;32m%}]%{\e[0m%}'
-
-#PATH=/usr/local/texlive/2013/bin/x86_64-linux:$PATH
-#PATH=/home/rino/.gem/ruby/2.1.0/bin:$PATH
 PATH=/opt/texlive/2016/bin/x86_64-linux:$PATH
 
 # Aliases 
@@ -96,7 +87,9 @@ alias rm='rm -I'
 # GTK_IM_MODULE=xim 
 # QT_IM_MODULE=xim
 
-export LC_ALL=C
+# export LC_ALL=C
+export LANG=ru_RU.UTF-8
+export LC_CTYPE=ru_RU.UTF-8
 
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
@@ -105,6 +98,3 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
-
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
