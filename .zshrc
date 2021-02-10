@@ -42,6 +42,7 @@ zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
+autoload zmv
 
 # autoload predict-on
 # zle -N predict-on
@@ -76,20 +77,24 @@ bindkey -e
 
 autoload -U promptinit && promptinit
 
-PATH=/opt/texlive/2016/bin/x86_64-linux:$PATH
+PATH=/home/rino/.local/bin:/usr/local/texlive/2020/bin/x86_64-linux:$PATH
+MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man:$MANPATH
+INFOPATH=/usr/local/texlive/2020/texmf-dist/doc/info:$INFOPATH
 
 # Aliases 
 
 alias ls='ls --color'
 alias rm='rm -I'
+alias ping="LC_MESSAGES=C ping"
+alias pacman="LC_ALL=C pacman"
 
 # environment
 # GTK_IM_MODULE=xim 
 # QT_IM_MODULE=xim
 
 # export LC_ALL=C
-export LANG=ru_RU.UTF-8
-export LC_CTYPE=ru_RU.UTF-8
+export LANG=uk_UA.UTF-8
+export LC_CTYPE=uk_UA.UTF-8
 
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
